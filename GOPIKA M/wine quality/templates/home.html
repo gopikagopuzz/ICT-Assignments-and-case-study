@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine purchase prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        function updateValue(slider, output) {
+            document.getElementById(output).innerText = slider.value;
+        }
+    </script>
+</head>
+<body  >
+    
+        <h2>🍷 <b>Wine Purchase Prediction</b> 🍷</h2>
+        <form action="/predict" method="post">
+ 
+    
+
+        <div class="slider-container">
+            <label>Fixed Acidity: <span id="fixed_acidity_val">8.31</span></label>
+            <input type="range" name="fixed_acidity" min="4.6" max="15.9" step="0.1" value="4.6" 
+                   oninput="updateValue(this, 'fixed_acidity_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>Volatile Acidity: <span id="volatile_acidity_val">0.53</span></label>
+            <input type="range" name="volatile_acidity" min="0.12" max="1.58" step="0.01" value="0.12" 
+                   oninput="updateValue(this, 'volatile_acidity_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>Citric Acid: <span id="citric_acid_val">0.27</span></label>
+            <input type="range" name="citric_acid" min="0.0" max="1.0" step="0.01" value="0.0" 
+                   oninput="updateValue(this, 'citric_acid_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>Residual Sugar: <span id="residual_sugar_val">2.52</span></label>
+            <input type="range" name="residual_sugar" min="0.9" max="15.5" step="0.1" value="0.9" 
+                   oninput="updateValue(this, 'residual_sugar_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>Chlorides: <span id="chlorides_val">0.088</span></label>
+            <input type="range" name="chlorides" min="0.012" max="0.611" step="0.001" value="0.012" 
+                   oninput="updateValue(this, 'chlorides_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>Free Sulfur Dioxide: <span id="free_sulfur_dioxide_val">15.89</span></label>
+            <input type="range" name="free_sulfur_dioxide" min="1" max="72" step="1" value="1" 
+                   oninput="updateValue(this, 'free_sulfur_dioxide_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>Total Sulfur Dioxide: <span id="total_sulfur_dioxide_val">46.83</span></label>
+            <input type="range" name="total_sulfur_dioxide" min="6" max="289" step="1" value="6" 
+                   oninput="updateValue(this, 'total_sulfur_dioxide_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>Density: <span id="density_val">0.9967</span></label>
+            <input type="range" name="density" min="0.9901" max="1.0037" step="0.0001" value="0.9901" 
+                   oninput="updateValue(this, 'density_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>pH: <span id="pH_val">3.31</span></label>
+            <input type="range" name="pH" min="2.74" max="4.01" step="0.01" value="2.74" 
+                   oninput="updateValue(this, 'pH_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>Sulphates: <span id="sulphates_val">0.66</span></label>
+            <input type="range" name="sulphates" min="0.33" max="2.0" step="0.01" value="0.33" 
+                   oninput="updateValue(this, 'sulphates_val')">
+        </div>
+
+        <div class="slider-container">
+            <label>Alcohol: <span id="alcohol_val">10.43</span></label>
+            <input type="range" name="alcohol" min="8.4" max="14.9" step="0.1" value="8.4" 
+                   oninput="updateValue(this, 'alcohol_val')">
+        </div>
+
+        <button type="submit" id="predict-btn">Predict</button>
+
+    </form>
+
+    <script>
+        function updateValue(slider, spanId) {
+            document.getElementById(spanId).textContent = slider.value;
+        }
+    </script>
+
+    
+</body>
+</html>     
+            
+

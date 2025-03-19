@@ -1,0 +1,105 @@
+body {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    background-image: url("/static/images/wine.png");
+    background-size: cover;
+    background-position: top ;
+    color: black;
+}
+
+h2 {
+    color: blueviolet;
+    margin-bottom : 10px;
+}
+
+
+/* Main container to center everything */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Grid layout to align labels and sliders */
+.sliders-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+/* Each row for label and slider */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+/* Label for features */
+.slider-container label {
+    width: 220px; /* Fixed width for labels */
+    font-weight: bold;
+    text-align: right;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+/* Slider input */
+.slider-container input {
+    width: 300px; /* Adjust slider width */
+}
+
+/* Predict button */
+#predict-btn {
+    border: 2px solid darkgreen;
+    background-color: darkgreen;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+#predict-btn:hover {
+    background-color: lightsalmon;
+    transition: 0.5s ease-in-out;
+    color: black;
+}
+
+/* Style the result box */
+.result-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+/* Make result text larger */
+.result-box h3 {
+    font-size: 24px;
+    color: darkred;
+}
+
+/* Button Styling */
+.button {
+    background-color: darkred;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: crimson;
+}
